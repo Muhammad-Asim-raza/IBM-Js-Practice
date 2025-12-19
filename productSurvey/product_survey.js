@@ -12,7 +12,7 @@ function submitFeedback() {
     document.getElementById('userAge').innerHTML = age;
     document.getElementById('userEmail').innerHTML = email;
     document.getElementById('userJob').innerHTML = job;
-    document.getElementById('userDesignation').innerHTML = designation;
+    document.getElementById('userDesignation').git commit -m "Restore restaurantMenu folder to previous state"innerHTML = designation;
     document.getElementById('userProductChoice').innerHTML = productType;
     document.getElementById('userFeedback').innerHTML = feedback;
     document.getElementById('Experience').innerHTML =experience;
