@@ -61,7 +61,8 @@ const timerElement = document.getElementById('timer');
             gameContainer.innerHTML = '';
             generateCards();
             gameContainer.addEventListener('click', handleCardClick);
-        }function startGameTimer(timeLeft) {
+        }
+        function startGameTimer(timeLeft) {
             timerElement.textContent = `Time Left: ${timeLeft}`;
             gameInterval = setInterval(() => {
                 timeLeft--;
