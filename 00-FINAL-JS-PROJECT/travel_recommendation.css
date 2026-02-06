@@ -1,0 +1,262 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+       font-family: Arial, sans-serif;
+}
+
+
+/* home page  */
+nav{
+    /* background: linear-gradient(to right, #0a0909, #0f1c20, #0c181e);
+    padding: 10px 20px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh; */
+    background: linear-gradient(to right, #0a0909, #0f1c20, #0c181e);
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+}
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+ul li a:hover {
+color: #00d4ff;
+}
+#searchbox {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px;
+    border-radius: 25px;
+    gap: 5px;
+}
+#search {
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    width: 220px;
+}
+#searchbtn,
+#resetbtn {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+#searchbtn {
+    background-color: #1abc9c;
+    color: white;
+}
+#resetbtn {
+    background-color: #1abc9c;
+    color: white;
+}
+#searchbtn:hover,
+#resetbtn:hover {
+    opacity: 0.85;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+.background {
+    width: 100%;
+    height: 90vh;
+    background-image: url('./images/yilei-jerry-bao-ojl1eJnDdSA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+    color: white;
+}
+
+.background .content h1 {
+    /* font-size: 4rem;
+    margin-bottom: 20px;
+    border: red 1.5px solid;
+    width: 43%;
+    line-height: 1;
+    padding: 5px; */
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.background .content p {
+    /* font-size: 1.0rem;
+    width: 30%;
+    border: red 1.5px solid;
+    padding: 10px;
+    margin-bottom: 30px; */
+    text-align: justify;
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.background .content button {
+    /* padding: 12px 25px;
+    font-size: 1rem;
+    background-color:  #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; */
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 20px rgba(26,188,156,0.4);
+}
+
+.background .content button:hover {
+    background-color: #16a085;
+}
+.content{
+    position: relative;
+    z-index: 1;
+    max-width: 450px;
+}
+.social-icons {
+    position: fixed;
+    top: 50%;
+    left: 20px;           /* change to right: 20px if needed */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    background: #1abc9c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #16a085;
+    transform: scale(1.1);
+}
+
+.content h1 {
+    animation: fadeUp 2s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Recommendation container */
+.recommendation-container {
+    position: absolute;
+    right: 40px;
+    top: 120px;
+    width: 420px;
+    height: calc(90vh - 160px);
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+}
+
+#recommendations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Recommendation card */
+.recommendation-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.recommendation-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.recommendation-card .info {
+    padding: 12px;
+}
+
+.recommendation-card h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #222;
+}
+
+.recommendation-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.recommendation-card button {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    background: #1abc9c;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.recommendation-card button:hover {
+    background: #16a085;
+}
+
+

@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+/* NAVBAR */
+nav {
+    height: 10vh;
+    background: linear-gradient(to right, #0a0909, #0f1c20, #0c181e);
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+nav ul li a.active {
+    color: #00d4ff;
+}
+
+/* HERO */
+.about-hero {
+    height: calc(100vh - 10vh); /* FIXED */
+    background-image: url('./images/yilei-jerry-bao-ojl1eJnDdSA-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    overflow: hidden;
+    padding-left: 7%;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    pointer-events: none;
+}
+
+/* ABOUT CONTENT */
+.about-content {
+    position: relative;
+    padding: 40px 80px;
+    max-width: 900px;
+}
+
+.about-content h1{
+    animation: fadeUp 1s ease;
+    font-size: 3.2rem;
+    margin-bottom: 15px;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    
+
+
+.about-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 6px;
+    border-radius: 5px;
+}
+
+/* TEAM SECTION */
+.team-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    padding: 0 80px 40px;
+}
+
+.team-section h2 {
+    animation: fadeUp 2s ease;
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
+    
+
+
+/* TEAM CARDS */
+.team-cards {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    width: 220px;
+    height: 190px;
+    padding: 18px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card i {
+    font-size: 26px;
+    margin-bottom: 8px;
+    color: #1abc9c;
+}
+
+.card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.card p {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+    opacity: 0.85;
+}
+
+.card span {
+    display: inline-block;
+    background: #1abc9c;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.social-icons a {
+    width: 45px;
+    height: 45px;
+    background: #1abc9c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #16a085;
+    transform: scale(1.1);
+}
